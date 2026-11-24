@@ -3,113 +3,533 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A One Event & Decoration | Wedding & Event Decorators in Dholka</title>
-<meta name="description" content="A One Event & Decoration, Dholka. Wedding, Haldi, Ring Ceremony, Shreemant, Couple Entry, Room, Birthday and Opening decoration. Curated to perfection.">
+<title>A One Event & Decoration | Curated to Perfection</title>
+<meta name="description" content="A One Event & Decoration - elegant wedding, haldi, ring ceremony, shreemant, couple entry, room, birthday and opening decoration. Curated to perfection.">
+<meta property="og:title" content="A One Event & Decoration">
+<meta property="og:description" content="Elegant decoration for weddings, ceremonies and every celebration. Curated to perfection.">
+<meta property="og:image" content="https://aoneeventmanagement.github.io/assets/logo.png">
+<meta name="theme-color" content="#5c2035">
 <link rel="icon" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--maroon:#5c2035;--maroon-d:#43142a;--cream:#eadccb;--cream-l:#f7f0e6;--gold:#d4b062;--text:#3a2a30}
+:root{
+  --maroon:#5c2035;--maroon-d:#3d1222;--maroon-l:#7a2d48;
+  --cream:#eadccb;--cream-l:#faf5ee;--gold:#d4b062;--gold-l:#ecd49a;
+  --text:#3a2a30;--muted:#7b6a70;
+  --shadow:0 18px 45px rgba(61,18,34,.14);
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Poppins',sans-serif;color:var(--text);background:var(--cream-l);line-height:1.6}
-h1,h2,h3{font-family:'Cormorant Garamond',serif;color:var(--maroon)}
+body{font-family:'Poppins',sans-serif;color:var(--text);background:var(--cream-l);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:700;line-height:1.15}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-header{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(92,32,53,.97);box-shadow:0 2px 12px rgba(0,0,0,.2)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.35rem;font-weight:700;letter-spacing:.5px}
-nav a{color:var(--cream);margin-left:22px;font-size:.9rem}
-nav a:hover{color:var(--gold)}
-.hero{min-height:100vh;display:flex;align-items:center;text-align:center;padding:90px 0 50px;
- background:linear-gradient(135deg,rgba(255,255,255,.35) 25%,transparent 25%) 0 0/60px 60px,var(--cream)}
-.hero img{width:min(380px,80%);margin-bottom:10px}
-.tag{letter-spacing:6px;color:var(--maroon);font-weight:500;font-size:.95rem;margin:10px 0 24px}
-.hero p.lead{max-width:560px;margin:0 auto 28px}
-.btn{display:inline-block;padding:13px 28px;border-radius:40px;font-weight:500;margin:6px;border:2px solid var(--maroon);transition:.25s}
-.btn.primary{background:var(--maroon);color:var(--gold)}
-.btn.primary:hover{background:var(--maroon-d)}
-.btn.ghost{color:var(--maroon)}
-.btn.ghost:hover{background:var(--maroon);color:var(--gold)}
-section{padding:80px 0}
-.title{text-align:center;margin-bottom:46px}
-.title h2{font-size:2.5rem}
-.title span{display:block;width:70px;height:3px;background:var(--gold);margin:10px auto 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-.card{background:#fff;border-radius:14px;padding:30px 22px;text-align:center;border-bottom:4px solid var(--gold);box-shadow:0 6px 18px rgba(92,32,53,.08);transition:.25s}
-.card:hover{transform:translateY(-6px)}
-.card .ic{font-size:2.2rem;margin-bottom:10px}
-.card h3{font-size:1.5rem}
-.dark{background:var(--maroon);color:var(--cream)}
-.dark h2{color:var(--gold)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.about ul{list-style:none}
-.about li{padding:8px 0}
-.about li:before{content:"◆";color:var(--gold);margin-right:10px}
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.box{background:var(--maroon-d);border-radius:14px;padding:26px}
-.box h3{color:var(--gold);font-size:1.5rem;margin-bottom:10px}
-.box a{display:block;padding:4px 0}
-.box a:hover{color:var(--gold)}
-footer{background:var(--maroon-d);color:var(--cream);text-align:center;padding:22px;font-size:.85rem}
-.fab{position:fixed;right:18px;bottom:18px;z-index:20;background:#25d366;color:#fff;padding:13px 20px;border-radius:40px;font-weight:600;box-shadow:0 4px 14px rgba(0,0,0,.3)}
-@media(max-width:700px){nav{display:none}.about{grid-template-columns:1fr}}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.script{font-family:'Great Vibes',cursive;color:var(--gold);font-weight:400}
+.eyebrow{display:inline-block;letter-spacing:5px;text-transform:uppercase;font-size:.78rem;font-weight:600;color:var(--gold)}
+.gold-text{background:linear-gradient(100deg,#b8913f,#f3dc9f 45%,#c79f4c 70%,#f0d791);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.35s}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;transition:.35s}
+header.scrolled{background:rgba(61,18,34,.94);backdrop-filter:blur(10px);box-shadow:0 6px 25px rgba(0,0,0,.25)}
+header.scrolled .wrap{height:68px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--cream)}
+.brand-mark{width:44px;height:44px;border-radius:50%;background:var(--cream);display:grid;place-items:center;overflow:hidden;border:2px solid var(--gold)}
+.brand-mark img{width:120%;max-width:none}
+.brand b{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:.5px;display:block;line-height:1}
+.brand small{font-size:.62rem;letter-spacing:3px;color:var(--gold)}
+nav{display:flex;align-items:center;gap:30px}
+nav a{color:var(--cream);font-size:.88rem;letter-spacing:.5px;position:relative}
+nav a:not(.btn):after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:1.5px;background:var(--gold);transition:.3s}
+nav a:not(.btn):hover:after{width:100%}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;width:34px;height:24px;position:relative}
+.menu-btn span{position:absolute;left:0;width:100%;height:2px;background:var(--gold);transition:.3s}
+.menu-btn span:nth-child(1){top:0}.menu-btn span:nth-child(2){top:11px}.menu-btn span:nth-child(3){top:22px}
+.menu-open .menu-btn span:nth-child(1){top:11px;transform:rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){opacity:0}
+.menu-open .menu-btn span:nth-child(3){top:11px;transform:rotate(-45deg)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:50px;font-size:.88rem;font-weight:500;letter-spacing:.8px;transition:.3s;cursor:pointer;border:1.5px solid transparent}
+.btn-gold{background:linear-gradient(120deg,#c49a45,#ecd49a,#c49a45);background-size:200% 100%;color:var(--maroon-d);box-shadow:0 10px 25px rgba(212,176,98,.35)}
+.btn-gold:hover{background-position:100% 0;transform:translateY(-2px)}
+.btn-line{border-color:var(--gold);color:var(--cream)}
+.btn-line:hover{background:var(--gold);color:var(--maroon-d)}
+.btn-maroon{background:var(--maroon);color:var(--gold-l)}
+.btn-maroon:hover{background:var(--maroon-d);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:var(--cream);overflow:hidden;
+  background:radial-gradient(ellipse at 75% 40%,#7a2d48 0%,#5c2035 35%,#3d1222 100%)}
+.hero:before{content:"";position:absolute;inset:0;opacity:.09;
+  background-image:linear-gradient(45deg,var(--gold) 1px,transparent 1px),linear-gradient(-45deg,var(--gold) 1px,transparent 1px);background-size:70px 70px}
+.sparkles span{position:absolute;bottom:-20px;width:6px;height:6px;border-radius:50%;background:var(--gold-l);box-shadow:0 0 12px var(--gold);opacity:0;animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:.9}100%{transform:translateY(-105vh) scale(1.1);opacity:0}}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:130px 0 90px}
+.hero h1{font-size:clamp(2.8rem,6vw,5rem);margin:14px 0 6px;color:#fff}
+.hero h1 .script{display:block;font-size:.75em;margin-bottom:-6px}
+.hero p{max-width:520px;color:#e9d9cf;font-weight:300;font-size:1.05rem;margin:18px 0 34px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-badges{display:flex;gap:34px;margin-top:46px;flex-wrap:wrap}
+.hero-badges div{border-left:2px solid var(--gold);padding-left:14px}
+.hero-badges b{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold-l);display:block;line-height:1.1}
+.hero-badges small{font-size:.75rem;letter-spacing:1px;color:#d8c4bb}
+.hero-art{position:relative;justify-self:center;width:min(430px,100%);aspect-ratio:1}
+.ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid rgba(212,176,98,.5)}
+.ring.r2{inset:-22px;border-style:dashed;border-color:rgba(212,176,98,.3);animation:spin 40s linear infinite}
+.ring.r3{inset:-48px;border-color:rgba(212,176,98,.15)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo-disc{position:absolute;inset:18px;border-radius:50%;background:radial-gradient(circle,#fbf4ea,#eadccb);display:grid;place-items:center;box-shadow:0 30px 70px rgba(0,0,0,.45),inset 0 0 0 6px rgba(212,176,98,.35);animation:float 6s ease-in-out infinite}
+.logo-disc img{width:78%;mix-blend-mode:multiply}
+@keyframes float{50%{transform:translateY(-12px)}}
+.scroll-cue{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);width:26px;height:42px;border:1.5px solid var(--gold);border-radius:20px}
+.scroll-cue:after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--gold);animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(14px)}}
+
+/* Marquee */
+.marquee{background:var(--gold);color:var(--maroon-d);overflow:hidden;white-space:nowrap;padding:14px 0}
+.marquee-track{display:inline-block;animation:marq 32s linear infinite}
+.marquee span{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;margin:0 26px}
+.marquee span:after{content:"✦";margin-left:52px;font-size:.9rem}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* Sections */
+section{padding:110px 0;position:relative}
+.head{text-align:center;max-width:640px;margin:0 auto 60px}
+.head h2{font-size:clamp(2.2rem,4vw,3.2rem);color:var(--maroon);margin:10px 0 14px}
+.head p{color:var(--muted)}
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin-top:8px}
+.divider:before,.divider:after{content:"";width:60px;height:1px;background:var(--gold)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-visual{position:relative;aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden;box-shadow:var(--shadow);
+  background:linear-gradient(160deg,var(--maroon-l),var(--maroon-d))}
+.about-visual:before{content:"";position:absolute;inset:16px;border-radius:205px 205px 10px 10px;border:1.5px solid rgba(212,176,98,.6)}
+.about-visual .inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;color:var(--cream)}
+.about-visual .script{font-size:3.4rem;line-height:1}
+.about-visual h3{font-size:2rem;color:#fff;margin:8px 0}
+.about-visual p{font-size:.8rem;letter-spacing:4px;color:var(--gold-l)}
+.about-tag{position:absolute;right:-18px;bottom:40px;background:#fff;padding:18px 22px;border-radius:14px;box-shadow:var(--shadow);text-align:center}
+.about-tag b{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--maroon);display:block;line-height:1}
+.about-tag small{font-size:.72rem;color:var(--muted);letter-spacing:1px}
+.about-text h2{font-size:clamp(2.2rem,4vw,3rem);color:var(--maroon);margin:10px 0 20px}
+.about-text p{color:var(--muted);margin-bottom:16px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0 34px}
+.feature{display:flex;gap:14px;align-items:flex-start}
+.feature i{flex:none;width:44px;height:44px;border-radius:12px;background:#f3e7d6;display:grid;place-items:center;color:var(--maroon)}
+.feature i svg{width:22px;height:22px}
+.feature b{display:block;color:var(--maroon);font-size:.95rem}
+.feature small{color:var(--muted);font-size:.8rem;line-height:1.5}
+
+/* Services */
+.services{background:var(--maroon-d);color:var(--cream);overflow:hidden}
+.services:before{content:"";position:absolute;inset:0;opacity:.06;background-image:radial-gradient(var(--gold) 1.2px,transparent 1.2px);background-size:26px 26px}
+.services .head h2{color:#fff}
+.services .head p{color:#cbb7ae}
+.svc-grid{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{position:relative;padding:38px 30px 34px;border-radius:18px;background:linear-gradient(160deg,rgba(122,45,72,.55),rgba(61,18,34,.6));border:1px solid rgba(212,176,98,.22);overflow:hidden;transition:.4s}
+.svc:before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,var(--gold),#b68c3c);opacity:0;transition:.4s}
+.svc>*{position:relative}
+.svc:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(0,0,0,.35)}
+.svc:hover:before{opacity:1}
+.svc:hover h3,.svc:hover p,.svc:hover .num{color:var(--maroon-d)}
+.svc:hover .svc-ic{background:var(--maroon-d);color:var(--gold)}
+.num{position:absolute;top:22px;right:26px;font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:rgba(212,176,98,.25);transition:.4s}
+.svc-ic{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:rgba(212,176,98,.14);color:var(--gold);margin-bottom:22px;transition:.4s}
+.svc-ic svg{width:28px;height:28px}
+.svc h3{font-size:1.65rem;color:#fff;margin-bottom:8px;transition:.4s}
+.svc p{font-size:.88rem;color:#cdb9b0;transition:.4s}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative}
+.steps:before{content:"";position:absolute;top:44px;left:12%;right:12%;border-top:1.5px dashed var(--gold)}
+.step{text-align:center;position:relative}
+.step .circle{width:88px;height:88px;margin:0 auto 22px;border-radius:50%;background:#fff;border:1.5px solid var(--gold);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--maroon);box-shadow:0 10px 25px rgba(92,32,53,.1);transition:.3s}
+.step:hover .circle{background:var(--maroon);color:var(--gold)}
+.step h3{font-size:1.5rem;color:var(--maroon);margin-bottom:6px}
+.step p{font-size:.86rem;color:var(--muted)}
+
+/* Occasions */
+.occasions{background:var(--cream)}
+.occ-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:18px}
+.occ{position:relative;border-radius:18px;overflow:hidden;display:flex;align-items:flex-end;padding:24px;color:#fff;box-shadow:var(--shadow)}
+.occ:before{content:"";position:absolute;inset:0;transition:.6s}
+.occ:hover:before{transform:scale(1.08)}
+.occ:after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.35);border-radius:12px;pointer-events:none}
+.occ div{position:relative}
+.occ small{letter-spacing:3px;font-size:.7rem;color:var(--gold-l);text-transform:uppercase}
+.occ h3{font-size:1.7rem}
+.o1{grid-column:span 2;grid-row:span 2}.o1:before{background:radial-gradient(circle at 30% 25%,#a84a6b,#5c2035 55%,#2e0c19)}
+.o2:before{background:radial-gradient(circle at 70% 20%,#f0cf6f,#c08a2c 60%,#8a5d16)}
+.o3:before{background:radial-gradient(circle at 30% 30%,#c86a86,#7a2d48 60%,#4a1428)}
+.o4:before{background:radial-gradient(circle at 60% 30%,#9a5a3c,#5c2f1f 65%,#341a10)}
+.o5:before{background:radial-gradient(circle at 40% 25%,#d9a65a,#8f5a2a 65%,#4f2f12)}
+.occ .big{font-family:'Great Vibes',cursive;font-size:3.6rem;color:var(--gold-l);line-height:1}
+
+/* CTA */
+.cta{padding:0;margin-top:-1px}
+.cta-box{position:relative;margin:0 auto;border-radius:26px;padding:70px 60px;text-align:center;color:var(--cream);overflow:hidden;
+  background:linear-gradient(120deg,var(--maroon-d),var(--maroon) 50%,var(--maroon-l));box-shadow:var(--shadow);transform:translateY(-60px)}
+.cta-box:before{content:"";position:absolute;inset:14px;border:1px solid rgba(212,176,98,.4);border-radius:18px;pointer-events:none}
+.cta-box h2{font-size:clamp(2rem,4vw,3rem);color:#fff;margin:6px 0 12px}
+.cta-box p{color:#dcc8bf;max-width:560px;margin:0 auto 30px}
+.cta-box .btn{margin:6px}
+
+/* Contact */
+.contact{padding-top:40px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.info-card{background:var(--maroon);color:var(--cream);border-radius:22px;padding:42px 36px;position:relative;overflow:hidden}
+.info-card:after{content:"";position:absolute;width:260px;height:260px;right:-90px;bottom:-90px;border-radius:50%;border:40px solid rgba(212,176,98,.08)}
+.info-card h3{font-size:2rem;color:#fff;margin-bottom:6px}
+.info-card>p{color:#d3bfb6;font-size:.9rem;margin-bottom:28px}
+.info-row{display:flex;gap:16px;margin-bottom:24px;position:relative;z-index:1}
+.info-row i{flex:none;width:46px;height:46px;border-radius:50%;background:rgba(212,176,98,.15);color:var(--gold);display:grid;place-items:center}
+.info-row i svg{width:20px;height:20px}
+.info-row small{display:block;letter-spacing:2px;font-size:.7rem;color:var(--gold);text-transform:uppercase}
+.info-row a,.info-row span{display:block;color:#fff;font-size:.98rem}
+.info-row a:hover{color:var(--gold-l)}
+.phones{display:grid;grid-template-columns:1fr 1fr;gap:2px 18px}
+form{background:#fff;border-radius:22px;padding:42px 36px;box-shadow:var(--shadow)}
+form h3{font-size:2rem;color:var(--maroon);margin-bottom:4px}
+form>p{color:var(--muted);font-size:.9rem;margin-bottom:24px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-size:.78rem;font-weight:500;letter-spacing:.5px;color:var(--maroon)}
+input,select,textarea{font:inherit;font-size:.92rem;padding:13px 15px;border:1.5px solid #eadfd3;border-radius:12px;background:var(--cream-l);color:var(--text);outline:none;transition:.25s}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 4px rgba(212,176,98,.15)}
+textarea{resize:vertical;min-height:100px}
+form .btn{margin-top:20px;width:100%;justify-content:center;border:0}
+
+/* Footer */
+footer{background:var(--maroon-d);color:#cdb9b0;padding:60px 0 26px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(212,176,98,.18)}
+.foot h4{color:var(--gold);font-size:1.3rem;margin-bottom:14px}
+.foot a{display:block;font-size:.88rem;padding:3px 0}
+.foot a:hover{color:var(--gold-l)}
+.foot p{font-size:.88rem}
+.social{display:flex;gap:12px;margin-top:18px}
+.social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(212,176,98,.4);display:grid;place-items:center;color:var(--gold);padding:0}
+.social a:hover{background:var(--gold);color:var(--maroon-d)}
+.social svg{width:18px;height:18px}
+.copy{text-align:center;font-size:.8rem;padding-top:22px;letter-spacing:.5px}
+
+/* Floating WhatsApp */
+.wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 25px rgba(37,211,102,.45);animation:pulse 2.4s infinite}
+.wa svg{width:32px;height:32px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s ease}
+.reveal.show{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* Responsive */
+@media(max-width:980px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-grid{text-align:center;gap:70px;padding-top:120px}
+  .hero p{margin-left:auto;margin-right:auto}
+  .hero-actions,.hero-badges{justify-content:center}
+  .hero-art{width:min(330px,80%);order:-1}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:44px}.steps:before{display:none}
+  .occ-grid{grid-template-columns:1fr 1fr}
+  .about-visual{max-width:420px;margin:0 auto;width:100%}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  nav{position:fixed;inset:0 0 0 auto;width:78%;max-width:320px;background:var(--maroon-d);flex-direction:column;justify-content:center;gap:28px;transform:translateX(100%);transition:.4s;box-shadow:-10px 0 40px rgba(0,0,0,.4)}
+  .menu-open nav{transform:none}
+  nav a{font-size:1.05rem}
+  .menu-btn{display:block;z-index:2}
+  section{padding:80px 0}
+  .svc-grid,.occ-grid,.features,.fields{grid-template-columns:1fr}
+  .o1{grid-column:auto;grid-row:auto}
+  .occ-grid{grid-auto-rows:180px}
+  .cta-box{padding:54px 26px}
+  .foot{grid-template-columns:1fr}
+  .about-tag{right:10px}
+  .steps{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="#home">A One Event &amp; Decoration</a>
-<nav><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
 
-<section class="hero" id="home"><div class="wrap">
-<img src="assets/logo.png" alt="A One Event & Decoration logo">
-<p class="tag">CURATED TO PERFECTION</p>
-<p class="lead">Aapke khaas pal ko yaadgaar banane ke liye. Wedding se birthday tak, har event ki sundar decoration Dholka mein.</p>
-<a class="btn primary" href="https://wa.me/918487926923?text=Hello%20A%20One%20Event%2C%20mujhe%20decoration%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener">WhatsApp Karein</a>
-<a class="btn ghost" href="tel:+918487926923">Call Karein</a>
-</div></section>
+<header id="top">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <span class="brand-mark"><img src="assets/logo.png" alt=""></span>
+      <span><b>A One Event</b><small>&amp; DECORATION</small></span>
+    </a>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-gold">Book Now</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-<section id="services"><div class="wrap">
-<div class="title"><h2>Our Services</h2><span></span></div>
-<div class="grid">
-<div class="card"><div class="ic">💍</div><h3>Wedding Decoration</h3></div>
-<div class="card"><div class="ic">✨</div><h3>Ring Ceremony</h3></div>
-<div class="card"><div class="ic">🌼</div><h3>Haldi Decoration</h3></div>
-<div class="card"><div class="ic">🌸</div><h3>Shreemant Decoration</h3></div>
-<div class="card"><div class="ic">💃</div><h3>Couple Entry</h3></div>
-<div class="card"><div class="ic">🛏️</div><h3>Room Decoration</h3></div>
-<div class="card"><div class="ic">🎂</div><h3>Birthday Decoration</h3></div>
-<div class="card"><div class="ic">🎀</div><h3>Opening Decoration</h3></div>
-<div class="card"><div class="ic">🎉</div><h3>All Events Orders</h3></div>
-</div></div></section>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="sparkles" id="sparkles"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Event Management &amp; Decoration</span>
+      <h1><span class="script">Celebrations,</span><span class="gold-text">Curated to Perfection</span></h1>
+      <p>From grand wedding mandaps to intimate room surprises, we design celebrations that feel personal, look stunning and stay in your memories forever.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold">Plan Your Event
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#services" class="btn btn-line">Explore Services</a>
+      </div>
+      <div class="hero-badges">
+        <div><b>9+</b><small>DECOR SERVICES</small></div>
+        <div><b>Custom</b><small>THEMES &amp; DESIGNS</small></div>
+        <div><b>On-Time</b><small>SETUP, EVERY TIME</small></div>
+      </div>
+    </div>
+    <div class="hero-art reveal d2">
+      <div class="ring r3"></div><div class="ring r2"></div><div class="ring"></div>
+      <div class="logo-disc"><img src="assets/logo.png" alt="A One Event & Decoration logo"></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll down"></a>
+</section>
 
-<section class="dark" id="about"><div class="wrap about">
-<div><h2 style="font-size:2.5rem;margin-bottom:14px">A One Event &amp; Decoration</h2>
-<p>Hum Dholka mein har chhote bade function ko khoobsurat aur yaadgaar banate hain. Aapka vision hamari decoration, har detail par dhyan ke saath.</p></div>
-<ul>
-<li>Har event ke liye custom decoration</li>
-<li>Wedding se leke birthday tak sab kuch</li>
-<li>Time par setup, detail par dhyan</li>
-<li>Seedhi baat, aasaan booking</li>
-</ul></div></section>
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Wedding Decoration</span><span>Ring Ceremony</span><span>Haldi Decoration</span><span>Shreemant Decoration</span><span>Couple Entry</span><span>Room Decoration</span><span>Birthday Decoration</span><span>Opening Decoration</span>
+    <span>Wedding Decoration</span><span>Ring Ceremony</span><span>Haldi Decoration</span><span>Shreemant Decoration</span><span>Couple Entry</span><span>Room Decoration</span><span>Birthday Decoration</span><span>Opening Decoration</span>
+  </div>
+</div>
 
-<section id="contact"><div class="wrap">
-<div class="title"><h2>Contact Us</h2><span></span></div>
-<div class="contact-grid dark" style="background:none;color:var(--cream)">
-<div class="box"><h3>📞 Call / WhatsApp</h3>
-<a href="tel:+918487926923">8487926923</a>
-<a href="tel:+917984782588">7984782588</a>
-<a href="tel:+916353818038">6353818038</a>
-<a href="tel:+917016895014">7016895014</a></div>
-<div class="box"><h3>📸 Instagram</h3>
-<a href="https://www.instagram.com/aone.event_management" target="_blank" rel="noopener">@aone.event_management</a></div>
-<div class="box"><h3>📍 Address</h3>
-<p>Ghanchi Dhal,<br>Dholka - 382225</p>
-<a href="https://www.google.com/maps/search/?api=1&query=Ghanchi+Dhal+Dholka+382225" target="_blank" rel="noopener">Map par dekhein →</a></div>
-</div></div></section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <div class="inner">
+        <span class="script">Welcome to</span>
+        <h3>A One Event<br>&amp; Decoration</h3>
+        <p>CURATED TO PERFECTION</p>
+      </div>
+      <div class="about-tag"><b>100%</b><small>PERSONALISED DECOR</small></div>
+    </div>
+    <div class="about-text reveal d1">
+      <span class="eyebrow">About Us</span>
+      <h2>Where Every Celebration Becomes a Masterpiece</h2>
+      <p>At A One Event &amp; Decoration, we believe every occasion has a story worth telling beautifully. Whether it is the grandeur of a wedding or the warmth of a birthday, we turn your ideas into elegant, unforgettable spaces.</p>
+      <p>Our team blends creativity with careful planning, handling every flower, fabric and light so you can simply enjoy the moment with your loved ones.</p>
+      <div class="features">
+        <div class="feature"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></i><div><b>Bespoke Designs</b><small>Themes crafted around your style and vision.</small></div></div>
+        <div class="feature"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i><div><b>Punctual Setup</b><small>Everything ready well before your guests arrive.</small></div></div>
+        <div class="feature"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></i><div><b>Attention to Detail</b><small>Premium materials and a flawless finish.</small></div></div>
+        <div class="feature"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6z"/></svg></i><div><b>Stress-Free Service</b><small>One team from concept to celebration.</small></div></div>
+      </div>
+      <a href="#contact" class="btn btn-maroon">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
 
-<footer>© <span id="y"></span> A One Event &amp; Decoration. All rights reserved.</footer>
-<a class="fab" href="https://wa.me/918487926923" target="_blank" rel="noopener">WhatsApp</a>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Our Signature Services</h2>
+      <p>Thoughtfully designed decor for every ritual, milestone and celebration.</p>
+      <div class="divider">✦</div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><span class="num">01</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="15" r="5"/><circle cx="15" cy="15" r="5"/><path d="M9 4l1.5 3h3L15 4"/></svg></div><h3>Wedding Decoration</h3><p>Majestic mandaps, stage backdrops and floral entrances for your big day.</p></div>
+      <div class="svc reveal d1"><span class="num">02</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="14" r="7"/><path d="M9 3h6l-3 4z"/></svg></div><h3>Ring Ceremony</h3><p>Elegant engagement setups that frame the moment you say yes.</p></div>
+      <div class="svc reveal d2"><span class="num">03</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div><h3>Haldi Decoration</h3><p>Vibrant marigold themes full of colour, joy and tradition.</p></div>
+      <div class="svc reveal"><span class="num">04</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c-4-2-7-5.5-7-10a7 7 0 0 1 14 0c0 4.5-3 8-7 10z"/><path d="M12 8v6M9 11h6"/></svg></div><h3>Shreemant Decoration</h3><p>Graceful baby shower decor to bless the new journey ahead.</p></div>
+      <div class="svc reveal d1"><span class="num">05</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"/><path d="M5 17l.9 2.1L8 20l-2.1.9L5 23l-.9-2.1L2 20l2.1-.9zM19 15l.7 1.5 1.3.5-1.3.5L19 19l-.7-1.5L17 17l1.3-.5z"/></svg></div><h3>Couple Entry</h3><p>Show-stopping grand entries with lights, fog and floral pathways.</p></div>
+      <div class="svc reveal d2"><span class="num">06</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18V8M21 18v-5a3 3 0 0 0-3-3H10v8M3 14h18"/><circle cx="6.5" cy="11" r="1.5"/></svg></div><h3>Room Decoration</h3><p>Romantic room surprises with petals, candles and balloons.</p></div>
+      <div class="svc reveal"><span class="num">07</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21h16v-8H4zM4 16c2 1 4-1 4-1s2 2 4 0 4 0 4 0 2 2 4 1"/><path d="M12 13V9M12 6a1.5 1.5 0 0 1 0-3c0 1.5 1.5 1.5 0 3z"/></svg></div><h3>Birthday Decoration</h3><p>Fun, themed birthday setups for kids and adults alike.</p></div>
+      <div class="svc reveal d1"><span class="num">08</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-5 9 5M5 9v11h14V9"/><path d="M10 20v-6h4v6"/></svg></div><h3>Opening Decoration</h3><p>Grand inaugurations for shops, offices and new homes.</p></div>
+      <div class="svc reveal d2"><span class="num">09</span><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20L9 6l9 9z"/><path d="M14 4l1 2M19 9l2-1M17 3l-1 3M20 14l1 1"/></svg></div><h3>All Event Orders</h3><p>Any celebration, any size. Tell us your idea and we will bring it to life.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How We Work</span>
+      <h2>From Idea to Celebration</h2>
+      <p>A simple, transparent process that keeps you relaxed from the first call to the final photo.</p>
+      <div class="divider">✦</div>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="circle">01</div><h3>Consultation</h3><p>Share your occasion, date, venue and the look you dream of.</p></div>
+      <div class="step reveal d1"><div class="circle">02</div><h3>Design</h3><p>We create a theme, colour palette and decor plan just for you.</p></div>
+      <div class="step reveal d2"><div class="circle">03</div><h3>Setup</h3><p>Our team arrives on time and sets everything up with care.</p></div>
+      <div class="step reveal d3"><div class="circle">04</div><h3>Celebrate</h3><p>You enjoy the moment while we take care of the details.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section class="occasions">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Moments We Create</span>
+      <h2>Decor for Every Milestone</h2>
+      <div class="divider">✦</div>
+    </div>
+    <div class="occ-grid">
+      <div class="occ o1 reveal"><div><span class="big">Weddings</span><small>Mandap · Stage · Entrance</small><h3>Your Forever Begins Here</h3></div></div>
+      <div class="occ o2 reveal d1"><div><small>Rituals</small><h3>Haldi &amp; Mehendi</h3></div></div>
+      <div class="occ o3 reveal d2"><div><small>Engagement</small><h3>Ring Ceremony</h3></div></div>
+      <div class="occ o4 reveal d1"><div><small>Surprises</small><h3>Room &amp; Birthday</h3></div></div>
+      <div class="occ o5 reveal d2"><div><small>Business</small><h3>Grand Openings</h3></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <span class="script" style="font-size:2.4rem">Let's make it unforgettable</span>
+      <h2>Planning a Celebration?</h2>
+      <p>Tell us about your event and we will design a decor experience your guests will talk about for years.</p>
+      <a href="tel:+918487926923" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call Now</a>
+      <a href="https://wa.me/918487926923?text=Hello%20A%20One%20Event%20%26%20Decoration%2C%20I%20would%20like%20to%20know%20more%20about%20your%20decoration%20services." target="_blank" rel="noopener" class="btn btn-line">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>Book Your Date</h2>
+      <p>Send us your event details and we will get back to you with ideas and a quote.</p>
+      <div class="divider">✦</div>
+    </div>
+    <div class="contact-grid">
+      <div class="info-card reveal">
+        <h3>Contact Details</h3>
+        <p>Call, WhatsApp or visit us. We would love to hear about your celebration.</p>
+        <div class="info-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></i>
+          <div><small>Phone</small><div class="phones">
+            <a href="tel:+918487926923">+91 84879 26923</a><a href="tel:+917984782588">+91 79847 82588</a>
+            <a href="tel:+916353818038">+91 63538 18038</a><a href="tel:+917016895014">+91 70168 95014</a></div></div></div>
+        <div class="info-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></i>
+          <div><small>Instagram</small><a href="https://www.instagram.com/aone.event_management" target="_blank" rel="noopener">@aone.event_management</a></div></div>
+        <div class="info-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></i>
+          <div><small>Email</small><a href="mailto:aoneeventmanagement7@gmail.com">aoneeventmanagement7@gmail.com</a></div></div>
+        <div class="info-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></i>
+          <div><small>Address</small><a href="https://www.google.com/maps/search/?api=1&query=Ghanchi+Dhal+Dholka+382225" target="_blank" rel="noopener">Ghanchi Dhal, Dholka - 382225</a></div></div>
+      </div>
+
+      <form id="bookForm" class="reveal d1">
+        <h3>Enquiry Form</h3>
+        <p>Fill in the details and send them to us directly on WhatsApp.</p>
+        <div class="fields">
+          <div class="field"><label for="fName">Your Name</label><input id="fName" required maxlength="60" placeholder="Full name"></div>
+          <div class="field"><label for="fPhone">Phone Number</label><input id="fPhone" type="tel" required maxlength="15" pattern="[0-9+ ]{10,15}" placeholder="10-digit mobile"></div>
+          <div class="field"><label for="fEvent">Event Type</label>
+            <select id="fEvent" required>
+              <option value="">Select an event</option>
+              <option>Wedding Decoration</option><option>Ring Ceremony</option><option>Haldi Decoration</option>
+              <option>Shreemant Decoration</option><option>Couple Entry</option><option>Room Decoration</option>
+              <option>Birthday Decoration</option><option>Opening Decoration</option><option>Other Event</option>
+            </select></div>
+          <div class="field"><label for="fDate">Event Date</label><input id="fDate" type="date"></div>
+          <div class="field full"><label for="fVenue">Venue / City</label><input id="fVenue" maxlength="80" placeholder="Where is the event?"></div>
+          <div class="field full"><label for="fMsg">Message</label><textarea id="fMsg" maxlength="500" placeholder="Tell us about your theme, colours or ideas"></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-maroon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.5 23.5l5.9-1.5A11.8 11.8 0 0 0 20.5 3.5zM12 21.4a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.5.9.9-3.4-.2-.4A9.8 9.8 0 1 1 12 21.4zm5.4-7.3c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3z"/></svg>
+          Send Enquiry on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#home" class="brand" style="padding:0;margin-bottom:16px">
+          <span class="brand-mark"><img src="assets/logo.png" alt=""></span>
+          <span><b>A One Event</b><small>&amp; DECORATION</small></span>
+        </a>
+        <p>Elegant decoration for weddings, ceremonies and every celebration in between. Curated to perfection.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/aone.event_management" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="https://wa.me/918487926923" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.5 23.5l5.9-1.5A11.8 11.8 0 0 0 20.5 3.5zM12 21.4a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.5.9.9-3.4-.2-.4A9.8 9.8 0 1 1 12 21.4z"/></svg></a>
+          <a href="mailto:aoneeventmanagement7@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Wedding Decoration</a><a href="#services">Ring Ceremony</a><a href="#services">Haldi Decoration</a>
+        <a href="#services">Couple Entry</a><a href="#services">Birthday Decoration</a>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#about">About Us</a><a href="#process">Our Process</a><a href="#contact">Book Your Date</a>
+        <a href="tel:+918487926923">+91 84879 26923</a>
+      </div>
+    </div>
+    <p class="copy">© <span id="year"></span> A One Event &amp; Decoration. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/918487926923" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.5 23.5l5.9-1.5A11.8 11.8 0 0 0 20.5 3.5zM12 21.4a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.5.9.9-3.4-.2-.4A9.8 9.8 0 1 1 12 21.4zm5.4-7.3c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+// Header style on scroll
+const header=document.getElementById('top');
+const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+// Mobile menu
+const menuBtn=document.getElementById('menuBtn');
+menuBtn.addEventListener('click',()=>document.body.classList.toggle('menu-open'));
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+
+// Floating sparkles in hero
+const sp=document.getElementById('sparkles');
+for(let i=0;i<26;i++){const s=document.createElement('span');s.style.left=Math.random()*100+'%';
+  s.style.animationDuration=(9+Math.random()*12)+'s';s.style.animationDelay=(Math.random()*12)+'s';
+  const z=2+Math.random()*5;s.style.width=s.style.height=z+'px';sp.appendChild(s);}
+
+// Reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Enquiry form -> WhatsApp
+document.getElementById('fDate').min=new Date().toISOString().split('T')[0];
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=id=>document.getElementById(id).value.trim();
+  const lines=['Hello A One Event & Decoration,','I would like to enquire about an event.','',
+    'Name: '+v('fName'),'Phone: '+v('fPhone'),'Event: '+v('fEvent')];
+  if(v('fDate'))lines.push('Date: '+v('fDate'));
+  if(v('fVenue'))lines.push('Venue: '+v('fVenue'));
+  if(v('fMsg'))lines.push('Details: '+v('fMsg'));
+  window.open('https://wa.me/918487926923?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
 </body>
 </html>

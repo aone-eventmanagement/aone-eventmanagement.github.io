@@ -249,6 +249,10 @@ section{padding:110px 0;position:relative}
 .occ:hover:before{transform:scale(1.08)}
 .occ:after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.35);border-radius:12px;pointer-events:none}
 .occ div{position:relative}
+.occ .art{position:absolute;top:22px;right:22px;width:42%;max-width:150px;fill:none;stroke:var(--gold-l);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.55;transition:transform .6s,opacity .6s}
+.o1 .art{width:48%;max-width:300px;top:28px;right:28px;opacity:.5}
+.occ:hover .art{opacity:.85;transform:translateY(-4px) scale(1.04)}
+.occ:focus-visible{outline-offset:4px}
 .occ small{letter-spacing:2px;font-size:.72rem;color:var(--gold-l);text-transform:uppercase}
 .occ h3{font-size:1.6rem}
 .o1{grid-column:span 2;grid-row:span 2}.o1:before{background:radial-gradient(circle at 30% 25%,#a84a6b,#5c2035 55%,#2e0c19)}
@@ -293,6 +297,13 @@ input,select,textarea{font:inherit;font-size:1rem;min-height:50px;padding:12px 1
 input:focus,select:focus,textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 4px rgba(212,176,98,.15)}
 textarea{resize:vertical;min-height:110px}
 form .btn{margin-top:20px;width:100%;border:0}
+.field .err{display:none;font-size:.78rem;color:#b3261e;font-weight:500}
+.field.invalid .err{display:block}
+.field.invalid input,.field.invalid select{border-color:#d9534f;background:#fff7f6}
+.form-note{display:none;margin-top:16px;padding:14px 16px;border-radius:12px;background:#f1f8ef;border:1px solid #b9dcb0;color:#2e5a25;font-size:.9rem}
+.form-note.show{display:block}
+nav a.active{color:var(--gold-l)}
+nav a.active:not(.btn):after{width:100%}
 
 /* Footer */
 footer{background:var(--maroon-dd);color:#cdb9b0;padding:60px 0 26px}
@@ -350,6 +361,7 @@ footer{background:var(--maroon-dd);color:#cdb9b0;padding:60px 0 26px}
   .head-right{gap:6px}
   nav{position:fixed;top:0;right:0;bottom:0;width:82%;max-width:340px;background:var(--maroon-dd);flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;padding:90px 28px 30px;transform:translateX(100%);transition:transform .4s;box-shadow:-10px 0 40px rgba(0,0,0,.4);overflow-y:auto}
   .menu-open nav{transform:none}
+  body.menu-open{overflow:hidden}
   nav a{font-size:1.08rem;padding:14px 4px;border-bottom:1px solid rgba(212,176,98,.15)}
   nav a:not(.btn):after{display:none}
   nav .btn{margin-top:24px;border-bottom:0}
@@ -532,11 +544,21 @@ footer{background:var(--maroon-dd);color:#cdb9b0;padding:60px 0 26px}
       <div class="divider" aria-hidden="true">✦</div>
     </div>
     <div class="occ-grid">
-      <div class="occ o1 reveal"><div><span class="big" data-i18n="o1big">Weddings</span><small data-i18n="o1s">Mandap · Stage · Entrance</small><h3 data-i18n="o1h">Your Forever Begins Here</h3></div></div>
-      <div class="occ o2 reveal d1"><div><small data-i18n="o2s">Rituals</small><h3 data-i18n="o2h">Haldi &amp; Mehendi</h3></div></div>
-      <div class="occ o3 reveal d2"><div><small data-i18n="o3s">Engagement</small><h3 data-i18n="o3h">Ring Ceremony</h3></div></div>
-      <div class="occ o4 reveal d1"><div><small data-i18n="o4s">Surprises</small><h3 data-i18n="o4h">Room &amp; Birthday</h3></div></div>
-      <div class="occ o5 reveal d2"><div><small data-i18n="o5s">Business</small><h3 data-i18n="o5h">Grand Openings</h3></div></div>
+      <a href="#contact" class="occ o1 reveal">
+        <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><path d="M10 112h100M20 112V54M100 112V54M14 54h92"/><path d="M20 54c0-22 18-37 40-42 22 5 40 20 40 42"/><path d="M60 12V5"/><circle cx="60" cy="4" r="2.2"/><path d="M20 62q10 10 20 0t20 0 20 0 20 0"/><circle cx="30" cy="69" r="1.6"/><circle cx="50" cy="69" r="1.6"/><circle cx="70" cy="69" r="1.6"/><circle cx="90" cy="69" r="1.6"/><path d="M36 112V84c0-10 11-17 24-17s24 7 24 17v28"/><path d="M44 112v-8a16 16 0 0 1 32 0v8"/></svg>
+        <div><span class="big" data-i18n="o1big">Weddings</span><small data-i18n="o1s">Mandap · Stage · Entrance</small><h3 data-i18n="o1h">Your Forever Begins Here</h3></div></a>
+      <a href="#contact" class="occ o2 reveal d1">
+        <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><path d="M38 72c-8 8-10 18-6 27 4 8 14 12 28 12s24-4 28-12c4-9 2-19-6-27z"/><path d="M46 72v-8h28v8M42 72h36M34 88h52"/><path d="M60 62c-6-10-16-14-25-12 4 8 15 12 25 12zM60 62c6-10 16-14 25-12-4 8-15 12-25 12z"/><circle cx="60" cy="44" r="10"/><circle cx="60" cy="44" r="4"/><circle cx="28" cy="36" r="6"/><circle cx="92" cy="36" r="6"/><path d="M44 98h.1M52 100h.1M60 101h.1M68 100h.1M76 98h.1" stroke-width="5" stroke-linecap="round"/></svg>
+        <div><small data-i18n="o2s">Rituals</small><h3 data-i18n="o2h">Haldi &amp; Mehendi</h3></div></a>
+      <a href="#contact" class="occ o3 reveal d2">
+        <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><circle cx="47" cy="76" r="26"/><circle cx="73" cy="76" r="26"/><path d="M65 42l8-10 8 10-8 8z"/><path d="M65 42h16"/><path d="M102 22v12M96 28h12M20 30v8M16 34h8"/></svg>
+        <div><small data-i18n="o3s">Engagement</small><h3 data-i18n="o3h">Ring Ceremony</h3></div></a>
+      <a href="#contact" class="occ o4 reveal d1">
+        <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="42" cy="40" rx="16" ry="20"/><ellipse cx="78" cy="34" rx="16" ry="20"/><path d="M40 60l2 4 2-4M76 54l2 4 2-4"/><path d="M42 64c-4 14 6 22 2 42M78 58c4 16-8 28-4 48"/><path d="M98 92c-7-5-11-9-11-13a5 5 0 0 1 11-2 5 5 0 0 1 11 2c0 4-4 8-11 13z"/><path d="M16 84h.1M24 98h.1M104 62h.1" stroke-width="5" stroke-linecap="round"/></svg>
+        <div><small data-i18n="o4s">Surprises</small><h3 data-i18n="o4h">Room &amp; Birthday</h3></div></a>
+      <a href="#contact" class="occ o5 reveal d2">
+        <svg class="art" viewBox="0 0 120 120" aria-hidden="true"><path d="M4 62c20-6 38 6 56 0s36-6 56 0"/><path d="M60 62c-14-14-28-12-28 0s14 14 28 0zM60 62c14-14 28-12 28 0s-14 14-28 0z"/><circle cx="60" cy="62" r="4"/><path d="M56 66l-12 30 8-4 4 8 6-32M64 66l12 30-8-4-4 8-6-32"/><path d="M96 14v10M91 19h10M24 18v8M20 22h8"/></svg>
+        <div><small data-i18n="o5s">Business</small><h3 data-i18n="o5h">Grand Openings</h3></div></a>
     </div>
   </div>
 </section>
@@ -586,8 +608,8 @@ footer{background:var(--maroon-dd);color:#cdb9b0;padding:60px 0 26px}
         <h3 data-i18n="form_title">Enquiry Form</h3>
         <p data-i18n="form_text">Fill in the details and send them to us directly on WhatsApp.</p>
         <div class="fields">
-          <div class="field"><label for="fName" data-i18n="fl_name">Your Name</label><input id="fName" name="name" autocomplete="name" required maxlength="60" data-i18n-ph="ph_name" placeholder="Full name"></div>
-          <div class="field"><label for="fPhone" data-i18n="fl_phone">Phone Number</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="15" pattern="[0-9+ ]{10,15}" data-i18n-ph="ph_phone" placeholder="10-digit mobile"></div>
+          <div class="field"><label for="fName" data-i18n="fl_name">Your Name</label><input id="fName" name="name" autocomplete="name" required maxlength="60" data-i18n-ph="ph_name" placeholder="Full name"><small class="err" id="fNameErr" data-i18n="err_name" aria-live="polite">Please enter your name</small></div>
+          <div class="field"><label for="fPhone" data-i18n="fl_phone">Phone Number</label><input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="15" pattern="[0-9+ ]{10,15}" data-i18n-ph="ph_phone" placeholder="10-digit mobile"><small class="err" id="fPhoneErr" data-i18n="err_phone" aria-live="polite">Please enter a valid mobile number</small></div>
           <div class="field"><label for="fEvent" data-i18n="fl_event">Event Type</label>
             <select id="fEvent" name="event" required>
               <option value="" data-i18n="opt_select">Select an event</option>
@@ -600,7 +622,7 @@ footer{background:var(--maroon-dd);color:#cdb9b0;padding:60px 0 26px}
               <option value="Birthday Decoration" data-i18n="s7">Birthday Decoration</option>
               <option value="Opening Decoration" data-i18n="s8">Opening Decoration</option>
               <option value="Other Event" data-i18n="opt_other">Other Event</option>
-            </select></div>
+            </select><small class="err" id="fEventErr" data-i18n="err_event" aria-live="polite">Please select an event</small></div>
           <div class="field"><label for="fDate" data-i18n="fl_date">Event Date</label><input id="fDate" name="date" type="date"></div>
           <div class="field full"><label for="fVenue" data-i18n="fl_venue">Venue / City</label><input id="fVenue" name="venue" maxlength="80" data-i18n-ph="ph_venue" placeholder="Where is the event?"></div>
           <div class="field full"><label for="fMsg" data-i18n="fl_msg">Message</label><textarea id="fMsg" name="message" maxlength="500" data-i18n-ph="ph_msg" placeholder="Tell us about your theme, colours or ideas"></textarea></div>
@@ -608,6 +630,7 @@ footer{background:var(--maroon-dd);color:#cdb9b0;padding:60px 0 26px}
         <button type="submit" class="btn btn-maroon">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.5 23.5l5.9-1.5A11.8 11.8 0 0 0 20.5 3.5zM12 21.4a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.5.9.9-3.4-.2-.4A9.8 9.8 0 1 1 12 21.4z"/></svg>
           <span data-i18n="form_btn">Send Enquiry on WhatsApp</span></button>
+        <p class="form-note" id="formNote" role="status" data-i18n="ok_sent">Thank you! WhatsApp has opened with your details. Just tap Send and we will reply soon.</p>
       </form>
     </div>
   </div>
@@ -694,6 +717,7 @@ hi:{
  fl_name:"आपका नाम",ph_name:"पूरा नाम",fl_phone:"फ़ोन नंबर",ph_phone:"10 अंकों का मोबाइल नंबर",fl_event:"इवेंट का प्रकार",
  opt_select:"इवेंट चुनें",opt_other:"अन्य इवेंट",fl_date:"इवेंट की तारीख",fl_venue:"जगह / शहर",ph_venue:"इवेंट कहाँ है?",
  fl_msg:"संदेश",ph_msg:"अपनी थीम, रंग या आइडिया बताइए",form_btn:"WhatsApp पर पूछताछ भेजें",
+ ok_sent:"धन्यवाद! आपकी जानकारी के साथ WhatsApp खुल गया है। बस Send दबाइए, हम जल्द जवाब देंगे।",
  err_name:"कृपया अपना नाम लिखें",err_phone:"कृपया सही मोबाइल नंबर लिखें",err_event:"कृपया इवेंट चुनें",
  foot_text:"शादी, रस्मों और हर जश्न के लिए शानदार सजावट। पूरी परफेक्शन के साथ।",foot_services:"सेवाएं",foot_links:"ज़रूरी लिंक",
  copy:"सर्वाधिकार सुरक्षित।",mb_call:"कॉल",mb_enq:"पूछताछ"
@@ -737,6 +761,7 @@ gu:{
  fl_name:"તમારું નામ",ph_name:"પૂરું નામ",fl_phone:"ફોન નંબર",ph_phone:"10 અંકનો મોબાઇલ નંબર",fl_event:"ઇવેન્ટનો પ્રકાર",
  opt_select:"ઇવેન્ટ પસંદ કરો",opt_other:"અન્ય ઇવેન્ટ",fl_date:"ઇવેન્ટની તારીખ",fl_venue:"સ્થળ / શહેર",ph_venue:"ઇવેન્ટ ક્યાં છે?",
  fl_msg:"સંદેશ",ph_msg:"તમારી થીમ, રંગો કે આઇડિયા જણાવો",form_btn:"WhatsApp પર પૂછપરછ મોકલો",
+ ok_sent:"આભાર! તમારી વિગતો સાથે WhatsApp ખુલી ગયું છે. ફક્ત Send દબાવો, અમે જલ્દી જવાબ આપીશું.",
  err_name:"કૃપા કરીને તમારું નામ લખો",err_phone:"કૃપા કરીને સાચો મોબાઇલ નંબર લખો",err_event:"કૃપા કરીને ઇવેન્ટ પસંદ કરો",
  foot_text:"લગ્ન, વિધિઓ અને દરેક ઉજવણી માટે શાનદાર સજાવટ. સંપૂર્ણ પરફેક્શન સાથે.",foot_services:"સેવાઓ",foot_links:"ઉપયોગી લિંક્સ",
  copy:"સર્વાધિકાર સુરક્ષિત.",mb_call:"કૉલ",mb_enq:"પૂછપરછ"
@@ -796,22 +821,47 @@ if('IntersectionObserver' in window){
 
 /* ---------- Enquiry form -> WhatsApp ---------- */
 const fDate=document.getElementById('fDate');
-fDate.min=new Date().toISOString().split('T')[0];
+const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());
+fDate.min=today.toISOString().slice(0,10);   // local date, not UTC
+const g=id=>document.getElementById(id);
+const v=id=>g(id).value.trim();
+const rules={fName:x=>x.length>0,fPhone:x=>/^\+?[0-9 ]{10,15}$/.test(x)&&x.replace(/\D/g,'').length>=10,fEvent:x=>x.length>0};
+function check(id){
+  const ok=rules[id](v(id));
+  const field=g(id).closest('.field');
+  field.classList.toggle('invalid',!ok);
+  g(id).setAttribute('aria-invalid',!ok);
+  if(!ok)g(id).setAttribute('aria-describedby',id+'Err');else g(id).removeAttribute('aria-describedby');
+  return ok;
+}
+Object.keys(rules).forEach(id=>{
+  const ev=g(id).tagName==='SELECT'?'change':'input';
+  g(id).addEventListener(ev,()=>{if(g(id).closest('.field').classList.contains('invalid'))check(id)});
+});
 document.getElementById('bookForm').addEventListener('submit',e=>{
   e.preventDefault();
-  const g=id=>document.getElementById(id);
-  const v=id=>g(id).value.trim();
-  if(!v('fName')){alert(t('err_name'));g('fName').focus();return}
-  if(!/^[0-9+ ]{10,15}$/.test(v('fPhone'))){alert(t('err_phone'));g('fPhone').focus();return}
-  if(!v('fEvent')){alert(t('err_event'));g('fEvent').focus();return}
+  const bad=Object.keys(rules).filter(id=>!check(id));
+  if(bad.length){g(bad[0]).focus();g('formNote').classList.remove('show');return}
   const lines=['Hello A One Event & Decoration,','I would like to enquire about an event.','',
     'Name: '+v('fName'),'Phone: '+v('fPhone'),'Event: '+v('fEvent')];
   if(v('fDate'))lines.push('Date: '+v('fDate'));
   if(v('fVenue'))lines.push('Venue: '+v('fVenue'));
   if(v('fMsg'))lines.push('Details: '+v('fMsg'));
   lines.push('Language: '+LANG.toUpperCase());
-  window.open('https://wa.me/918487926923?text='+encodeURIComponent(lines.join('\n')),'_blank','noopener');
+  const url='https://wa.me/918487926923?text='+encodeURIComponent(lines.join('\n'));
+  const w=window.open(url,'_blank');
+  if(w)w.opener=null;else location.href=url;   // popup blocked: open in same tab
+  g('formNote').classList.add('show');
 });
+
+/* ---------- Highlight current section in menu ---------- */
+if('IntersectionObserver' in window){
+  const links={};document.querySelectorAll('#nav a:not(.btn)').forEach(a=>links[a.getAttribute('href').slice(1)]=a);
+  const spy=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){Object.values(links).forEach(a=>a.classList.remove('active'));links[e.target.id]&&links[e.target.id].classList.add('active');}
+  }),{rootMargin:'-45% 0px -50% 0px'});
+  ['home','about','services','process','contact'].forEach(id=>{const s=document.getElementById(id);s&&spy.observe(s)});
+}
 document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 </body>
